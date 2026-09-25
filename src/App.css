@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f4f5f7;
+}
+
+.sidebar {
+  width: 65px;
+  background-color: #fbc02d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  color: #333333;
+}
+
+.icon-btn.active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.dashboard-container {
+  flex: 1;
+  padding: 25px 30px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-title {
+  font-size: 22px;
+  color: #222222;
+  font-weight: bold;
+}
+
+.search-input {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  color: #333333;
+  padding: 8px 18px;
+  border-radius: 20px;
+  width: 200px;
+  font-size: 13px;
+  outline: none;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  background-color: #e2e8f0;
+  color: #666666;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background-color: #fbc02d;
+  color: #000000;
+  font-weight: bold;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-container {
+  position: relative;
+  width: 100%;
+  height: 110px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-status {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #fbc02d;
+  color: #000000;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.card-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-category {
+  font-size: 11px;
+  color: #888888;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  margin: 4px 0;
+}
+
+.card-description {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.card-button {
+  background-color: #222222;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.right-panel {
+  width: 280px;
+  background-color: #ffffff;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #e8e8e8;
+}
+
+.right-panel-card {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.right-panel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.panel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #dddddd;
+}
+
+.dot.active {
+  background-color: #fbc02d;
+  width: 18px;
+  border-radius: 10px;
+}
+
+.panel-info {
+  flex: 1;
+}
+
+.panel-title {
+  font-size: 18px;
+  color: #222222;
+  margin-bottom: 4px;
+}
+
+.panel-subtitle {
+  font-size: 13px;
+  color: #777777;
+  margin-bottom: 10px;
+}
+
+.rating-stars {
+  color: #fbc02d;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.star-off {
+  color: #cccccc;
+}
+
+.rating-text {
+  font-size: 12px;
+  color: #666666;
+  margin-left: 6px;
+}
+
+.panel-description {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.4;
+}
+
+.panel-action {
+  margin-top: 20px;
+}
+
+.action-btn {
+  width: 100%;
+  background-color: #fbc02d;
+  color: #000000;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+.card-destacada {
+  border: 2px solid #fbc02d;
+}
+
+.badge-destacado {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background-color: #fbc02d;
+  color: #000000;
+  font-size: 11px;
+  font-weight: bold;
+}
